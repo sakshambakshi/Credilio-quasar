@@ -52,7 +52,9 @@ export default defineConfig((/* ctx */) => {
 
       // publicPath: '/',
       // analyze: true,
-      // env: {},
+      env: {
+        API_TOKEN: process.env.API_TOKEN || '07ae3cc1ec344179b4a5a7fe5e359d11',
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,

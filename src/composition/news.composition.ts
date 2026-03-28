@@ -47,7 +47,7 @@ export function useNews() {
     try {
       ALL_NEWS.status = ELoadingStatus.LOADING;
       const results = await fetch(
-        `https://newsapi.org/v2/everything?q=keyword&apiKey=${API_TOKEN}`,
+        `https://newsapi.org/v2/everything?q=keyword&apiKey=${process.env.API_TOKEN}`,
       );
 
       const data = await results.json();
@@ -125,4 +125,3 @@ export function useNews() {
   };
 }
 
-const API_TOKEN = '07ae3cc1ec344179b4a5a7fe5e359d11'; // CAN BE SHifted to env later
