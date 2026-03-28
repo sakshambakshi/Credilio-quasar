@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue';
 import { isDataLoaded, showSearch, useNews } from 'src/composition/news.composition';
-import NoSearchResult from 'src/components/NoSearchResult.vue';
-import NewsListing from 'src/components/NewsListing.vue';
-import NewsListingPagination from 'src/components/NewsListingPagination.vue';
-import NewsSearch from 'src/components/NewsSearch.vue';
 
+const NoSearchResult = defineAsyncComponent(() => import('src/components/NoSearchResult.vue'));
+const NewsListing = defineAsyncComponent(() => import('src/components/NewsListing.vue'));
+const NewsListingPagination = defineAsyncComponent(() => import('src/components/NewsListingPagination.vue'));
+const NewsSearch = defineAsyncComponent(() => import('src/components/NewsSearch.vue'));
 
 const { isSearchResultUnavailable } = useNews()
 
