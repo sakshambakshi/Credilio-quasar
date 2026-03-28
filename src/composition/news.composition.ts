@@ -77,7 +77,7 @@ export function useNews() {
       await fetchNews();
     }
     const newsFiltered = ALL_NEWS.news.filter((news: INews) => news.newsId === newsId) as INews[];
-    debugger;
+
     if (newsFiltered.length >= 0) return newsFiltered[0]!;
 
     return null;
