@@ -1,1 +1,39 @@
 /* app global css */
+    /* Custom utility classes to keep cards uniform */
+    .news-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
+    .card-content-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-description {
+      flex-grow: 1;
+    }
+    .text-truncate-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .text-truncate-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .detail-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    body {
+      background-color: #f5f7fa;
+    }
